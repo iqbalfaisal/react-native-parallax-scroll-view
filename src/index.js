@@ -390,26 +390,26 @@ class ParallaxScrollView extends Component {
 								height: stickyHeaderHeight,
 								opacity: interpolate(scrollY, {
 									inputRange: [0, p],
-									outputRange: [0, 1],
+									outputRange: [0, 15],
 									extrapolate: 'clamp'
 								})
 							}}
 						>
-							<Animated.View
-								style={{
-									transform: [
-										{
-											translateY: interpolate(scrollY, {
-												inputRange: [0, p],
-												outputRange: [stickyHeaderHeight, 0],
-												extrapolate: 'clamp'
-											})
-										}
-									]
-								}}
-							>
+// 							<Animated.View
+// 								style={{
+// 									transform: [
+// 										{
+// 											translateY: interpolate(scrollY, {
+// 												inputRange: [0, p],
+// 												outputRange: [stickyHeaderHeight, 0],
+// 												extrapolate: 'clamp'
+// 											})
+// 										}
+// 									]
+// 								}}
+// 							>
 								{renderStickyHeader()}
-							</Animated.View>
+// 							</Animated.View>
 						</Animated.View>
 						: null}
 					{renderFixedHeader && renderFixedHeader()}
